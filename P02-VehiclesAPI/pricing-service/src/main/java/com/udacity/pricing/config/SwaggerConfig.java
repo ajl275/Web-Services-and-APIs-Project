@@ -1,4 +1,4 @@
-package com.udacity.vehicles.config;
+package com.udacity.pricing.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -9,6 +9,7 @@ import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
 import java.util.Collections;
 
 @Configuration
@@ -26,13 +27,11 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfo(
-                "Vehicles API",
-                "This API performs CRUD operations related to vehicle details like make, model, color, etc. " +
-                        "as well as retrieving price and location data from external APIs",
+                "Pricing API",
+                "The Pricing Service is a REST WebService that simulates a backend that would store and retrieve the price of a vehicle given a vehicle id as input.",
                 "1.0",
                 "http://www.udacity.com/tos",
-                new Contact("Amy Lanclos", "https://www.github.com/ajl275", "ajl275@cornell.edu"),
+                new Contact("Amy Lanclos", "www.github.com/ajl275", "ajl275@cornell.edu"),
                 "License of API", "http://www.udacity.com/license", Collections.emptyList());
     }
-
 }
